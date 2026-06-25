@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Journalist & Writer</title>
+    <style>
+        /* LITERARY DESIGN SYSTEM */
+        :root {
+            --bg-color: #f7f2ea;       /* Warm, elegant tan/book-paper background */
+            --text-main: #2b2621;      /* Deep espresso off-black for a literary look */
+            --text-muted: #615a53;     /* Muted sepia grey for metadata */
+            --accent: #8c3f2b;         /* Editorial brick red for active links */
+            --border: #dfd7cc;          /* Soft border divider line */
+        }
+
+        /* RESET & BASE STYLES */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Georgia", Garamond, Baskerville, serif; /* Elegant book typography */
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        /* CONTAINER SETUP */
+        .site-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* HEADER & NAVIGATION TABS */
+        header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        /* Navigation Tabs */
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        nav a:hover, nav a.active {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* MAIN TWO-COLUMN LAYOUT */
+        .profile-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr; /* Text wider on left, photo narrower on right */
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* LEFT SIDE: TEXT CONTENT */
+        .bio-text h2 {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .bio-text p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* RIGHT SIDE: PHOTO WRAPPER */
+        .bio-photo-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .bio-photo {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: 2px; /* Slight edge soften, keeping a clean print-look */
+            box-shadow: 0 4px 15px rgba(43, 38, 33, 0.08); /* Soft vintage drop shadow */
+            border: 1px solid var(--border);
+            background-color: #e8e1d5; /* Placeholder block background */
+        }
+        .photo-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* FOOTER BRIDGING */
+        footer {
+            margin-top: 100px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* RESPONSIVE DESIGN (For mobile viewports) */
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr; /* Switch to stack top-to-bottom on mobile */
+                gap: 30px;
+            }
+            .bio-photo-wrapper {
+                order: -1; /* Puts photo on top when viewed on small mobile screens */
+                margin-bottom: 20px;
+            }
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-wrapper">
+        
+        <!-- HEADER & TABS STACK -->
+        <header>
+            <div class="header-top">
+                <h1>Your Name</h1>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="#">Articles</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- MAIN BIOGRAPHY MATRIX -->
+        <main class="profile-container">
+            
+            <!-- LEFT COLUMN: LITERARY BIO TEXT -->
+            <section class="bio-text">
+                <h2>Journalist, Essayist, & Culture Reporter</h2>
+                <p>
+                    Welcome to my portfolio space. I am an independent journalist covering the intersection of local community histories, changing urban landscapes, and contemporary literature. My essays and reporting explore how human narratives survive inside rapidly evolving corporate and digital frameworks.
+                </p>
+                <p>
+                    Currently working on freelance investigative briefs, my writing has appeared across various regional magazines, independent literature reviews, and national media syndicates. I specialize in deep archival research, long-form human interest documentation, and long-lead analytical reporting.
+                </p>
+                <p>
+                    Previously, I spent three years anchoring news updates and regional reporting desks across local public broadcast affiliations, building clean audio and print profiles across diverse beats.
+                </p>
+            </section>
+
+            <!-- RIGHT COLUMN: HEADSHOT IMAGE ASSET -->
+            <section class="bio-photo-wrapper">
+                <!-- Replace 'placeholder-profile.jpg' with your real uploaded image filename later -->
+                <img src="placeholder-profile.jpg" alt="Your Portrait Picture" class="bio-photo">
+                <p class="photo-caption">Photography by [Photographer Name]</p>
+            </section>
+
+        </main>
+
+        <!-- FOOTER SIGN-OFF -->
+        <footer>
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
