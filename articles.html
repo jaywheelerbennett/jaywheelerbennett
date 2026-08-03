@@ -212,9 +212,6 @@
                 
 <!-- ARTICLE 1: QUANTA --> 
 <article class="article-card"> 
-  <a href="https://www.quantamagazine.org/astrophysicists-puzzle-over-webbs-new-universe-20260702/" class="card-image-link" target="_blank"> 
-    <img data-url="https://www.quantamagazine.org/astrophysicists-puzzle-over-webbs-new-universe-20260702/" alt="JWST Space View" class="card-image"> 
-  </a> 
   <div class="card-content"> 
     <div class="article-meta">
       <span class="pub-name">Quanta Magazine</span> &bull; July 2, 2026
@@ -228,9 +225,6 @@
 
 <!-- ARTICLE 2: SCIENTIFIC AMERICAN --> 
 <article class="article-card"> 
-  <a href="https://www.scientificamerican.com/article/worlds-most-accurate-clocks-could-redefine-time/" class="card-image-link" target="_blank"> 
-    <img data-url="https://www.scientificamerican.com/article/worlds-most-accurate-clocks-could-redefine-time/" alt="Atomic Precision Clock" class="card-image"> 
-  </a> 
   <div class="card-content"> 
     <div class="article-meta">
       <span class="pub-name">Scientific American</span> &bull; Feb 18, 2025
@@ -244,9 +238,6 @@
 
 <!-- ARTICLE 3: NATIONAL GEOGRAPHIC --> 
 <article class="article-card"> 
-  <a href="https://www.nationalgeographic.com/premium/article/how-ancient-cultures-discovered-iron-feature" class="card-image-link" target="_blank"> 
-    <img data-url="https://www.nationalgeographic.com/premium/article/how-ancient-cultures-discovered-iron-feature" alt="Ancient Chinese Weapon" class="card-image"> 
-  </a> 
   <div class="card-content"> 
     <div class="article-meta">
       <span class="pub-name">National Geographic</span> &bull; May 9, 2023
@@ -260,9 +251,6 @@
 
 <!-- ROW 2 | ARTICLE 4: SMITHSONIAN ARTEMIS 2 VIEWERS --> 
 <article class="article-card"> 
-  <a href="https://www.smithsonianmag.com/science-nature/spectators-flocked-to-the-artemis-2-launch-to-witness-history-being-made-one-awed-viewer-called-it-the-best-thing-ever-180988474/" class="card-image-link" target="_blank"> 
-    <img data-url="https://www.smithsonianmag.com/science-nature/spectators-flocked-to-the-artemis-2-launch-to-witness-history-being-made-one-awed-viewer-called-it-the-best-thing-ever-180988474/" alt="Crowds watching spaceship launch" class="card-image"> 
-  </a> 
   <div class="card-content"> 
     <div class="article-meta">
       <span class="pub-name">Smithsonian Magazine</span> &bull; April 2, 2026
@@ -276,9 +264,6 @@
 
 <!-- ROW 2 | ARTICLE 5: WIRED --> 
 <article class="article-card"> 
-  <a href="https://www.wired.com/story/the-trip-to-the-far-side-of-the-moon-nasa-artemis/" class="card-image-link" target="_blank"> 
-    <img data-url="https://www.wired.com/story/the-trip-to-the-far-side-of-the-moon-nasa-artemis/" alt="The dark side of the moon surface" class="card-image"> 
-  </a> 
   <div class="card-content"> 
     <div class="article-meta">
       <span class="pub-name">Wired</span> &bull; April 2026
@@ -292,9 +277,6 @@
 
 <!-- ROW 2 | ARTICLE 6: SMITHSONIAN MICHAEL COLLINS --> 
 <article class="article-card"> 
-  <a href="https://www.smithsonianmag.com/science-nature/michael-collins-past-and-future-space-exploration-180972699/" class="card-image-link" target="_blank"> 
-    <img data-url="https://www.smithsonianmag.com/science-nature/michael-collins-past-and-future-space-exploration-180972699/" alt="Astronaut Michael Collins portrait" class="card-image"> 
-  </a> 
   <div class="card-content"> 
     <div class="article-meta">
       <span class="pub-name">Smithsonian Magazine</span> &bull; July 2019
@@ -308,35 +290,6 @@
 
 </div> <!-- Closes the card grid container -->
 </main> <!-- Closes the main section -->
-
-<!-- AUTOMATION SCRIPT -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const articleImages = document.querySelectorAll('.card-image[data-url]');
-
-    articleImages.forEach(img => {
-      const articleUrl = img.getAttribute('data-url');
-      
-      // FIXED LINE: Added the required api parameters 'api.' and '?url=${}'
-      const apiUrl = `https://microlink.io{encodeURIComponent(articleUrl)}`;
-
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(responseJson => {
-          if (responseJson.status === 'success' && responseJson.data.image) {
-            img.src = responseJson.data.image.url;
-          } else {
-            // Minimalist cream-colored fallback block matching your design layout
-            img.src = "https://placeholders.dev";
-          }
-        })
-        .catch(error => {
-          console.error("Error fetching preview image:", error);
-          img.src = "https://placeholders.dev";
-        });
-    });
-  });
-</script>
 
         <!-- FOOTER SIGN-OFF -->
     </div>
