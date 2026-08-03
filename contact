@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Jay Bennett</title>
+    <style>
+        /* LITERARY DESIGN SYSTEM */
+        :root {
+            --bg-color: #f7f2ea;       /* Warm, elegant tan/book-paper background */
+            --text-main: #2b2621;      /* Deep espresso off-black for a literary look */
+            --text-muted: #615a53;     /* Muted sepia grey for metadata */
+            --accent: #8c3f2b;         /* Editorial brick red for active links */
+            --border: #dfd7cc;          /* Soft border divider line */
+            --card-bg: #faf7f2;        /* Lighter tan for the contact interface */
+        }
+
+        /* RESET & BASE STYLES */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Georgia", Garamond, Baskerville, serif; /* Elegant book typography */
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        /* CONTAINER SETUP */
+        .site-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* HEADER & NAVIGATION TABS */
+        header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        /* Navigation Tabs */
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        nav a:hover, nav a.active {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* PAGE HEADER TITLE */
+        .page-title {
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        /* CONTACT CARD LAYOUT */
+        .contact-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 40px;
+            max-width: 540px;
+            box-shadow: 0 4px 15px rgba(43, 38, 33, 0.04);
+        }
+
+        /* INDIVIDUAL LINKS STYLING */
+        .contact-method {
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+        }
+        .contact-method:last-child {
+            margin-bottom: 0;
+        }
+        .contact-label {
+            font-weight: 700;
+            color: var(--text-muted);
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .contact-link {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            transition: all 0.2s ease;
+        }
+        .contact-link:hover {
+            color: var(--accent);
+            background-color: rgba(140, 63, 43, 0.05);
+        }
+
+        /* FOOTER BRIDGING */
+        footer {
+            margin-top: 100px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 30px 20px;
+            }
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-wrapper">
+        
+        <!-- HEADER & TABS STACK -->
+        <header>
+            <div class="header-top">
+                <h1>Jay Bennett</h1>
+                <nav>
+                    <a href="https://jaywheelerbennett.github.io/jaywheelerbennett/">Home</a>
+                    <a href="https://jaywheelerbennett.github.io/jaywheelerbennett/articles">Articles</a>
+                    <a href="https://github.io" class="active">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- MAIN LAYOUT MATRIX -->
+        <main>
+            <h2 class="page-title">Contact Jay</h2>
+            
+            <div class="contact-card">
+                <!-- EMAIL BLOCK -->
+                <div class="contact-method">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:jaywheelerbennett@gmail.com" class="contact-link">jaywheelerbennett@gmail.com</a>
+                </div>
+
+                <!-- LINKEDIN BLOCK -->
+                <div class="contact-method">
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/jay-bennett-8176b067/" target="_blank" class="contact-link">linkedin.com/in/jay-bennett-8176b067</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER DIVIDER LINE -->
+        <footer></footer>
+
+    </div>
+
+</body>
+</html>
